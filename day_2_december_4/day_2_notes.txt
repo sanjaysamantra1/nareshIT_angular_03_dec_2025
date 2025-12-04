@@ -1,0 +1,24 @@
+Tools & Softwares
+=================
+1. VSCode (Editor)
+   https://code.visualstudio.com/download
+
+2. install 'open in browser' vscode extension
+   https://marketplace.visualstudio.com/items?itemName=techer.open-in-browser
+
+
+Emmet / shortcut
+================
+https://docs.emmet.io/cheat-sheet/
+
+! HTML-5
+ol>li*5{City-$}
+select>option*200{Country-$}
+table>tbody>tr*50>td*5{Data-$}
+
+
+
+create a HTML FIle And OPen In browser
+======================================
+1. create an HTML file, add html content
+2. alt + shift + b  / alt+b
