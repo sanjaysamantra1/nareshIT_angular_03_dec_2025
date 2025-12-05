@@ -1,0 +1,33 @@
+HTML - content of a webpage
+CSS - for styling
+Bootstrap - Responsiveness + pre-defined components-table,carousel,modal,card
+Javascript - behaviour of a webpage
+
+
+CSS
+===
+1. inline CSS   (Element)       style attribute
+2. internal CSS (Page)          <style></style>
+3. External CSS (Application)   
+    .css file , link that to HTML 
+    <link rel="stylesheet" href="style.css">
+
+
+Bootstrap:
+==========
+-CSS Library (Twitter)
+-Bottstrap-3 , Bootstrap-4 , Bootstrap-5
+-Use Bootstrap CDN Link in our HTML file
+
+
+Javascript
+==========
+internal   <script></script>
+external   .js , link that js file using <script></script>
+
+
+Script Async/defer
+==================
+<script src="./addtion.js" async></script>
+<script src="./change_color.js" defer></script>
+

@@ -1,0 +1,19 @@
+img {
+    width: 300px;
+    height: 400px;
+}
+
+button {
+    padding: 15px 60px;
+    border: none;
+    color: white;
+    font-weight: bold;
+}
+
+#addToCart {
+    background-color: orange;
+}
+
+#buyNow {
+    background-color: orangered;
+}
