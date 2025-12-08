@@ -1,0 +1,55 @@
+javascript : Is a Programming Language, follows ECMAscript rules 
+ECMAScript : Set of standards , are followed by javascript
+ECMA : European Computer Menufecturer Association
+
+
+<2015  ES_5   
+2015   ES_6  ( let,const,class,extends,module,REST,Spread.....)
+2016   ES_7  ( ** )
+2017   ES_8
+2018   ES_9
+2019   ES_10
+2020   ES_11
+2021   ES_12
+2022   ES_13
+2023   ES_14
+2024   ES_15
+
+
+
+
+Variables
+=========
+-in javascript variables can be declared by using eiteh of the below 3 keywords:
+    1. var
+    2. let
+    3. const
+
+
+    Var                            Let                            const
+=================================================================================
+1. Since Begining               1. ES_6 (2015)              1. ES_6  (2015)
+2. value can be changed         2. value can be changed     2. value cann't be changed
+3. not mandatory                3. not mandatory            3. initialization : mandatory
+4. Function,global              4. block,function,global    4. block,function,global
+
+
+
+
+Variable Scopes:
+===============
+1. Global : declared outside a function , can be accssed by any of the functions inside a subscriptions
+2. Function : declared inside a function , can be accssed only inside that function
+3. Block : declared inside a Block , can be accssed only inside that Block (if, else, loop)
+
+Note : if a variable is declared without var/let/const , its scope is always 'global'
+-It's not recommended to declare variables without var/let/const
+
+
+Strict
+======
+Noraml : Few mistakes are ignored
+Strict : mistakes are considered as errors
+-'use strict' is used to enable strict mode
+1. strict mode doesnt allow to declare variables without var/let/const
+2. duplicate parameter not allowed
