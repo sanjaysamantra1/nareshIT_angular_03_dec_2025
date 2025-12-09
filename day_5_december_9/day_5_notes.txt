@@ -1,0 +1,35 @@
+    Var                            Let                            const
+=================================================================================
+1. Since Begining               1. ES_6 (2015)              1. ES_6  (2015)
+2. value can be changed         2. value can be changed     2. value cann't be changed
+3. not mandatory                3. not mandatory            3. initialization : mandatory
+4. Function,global              4. block,function,global    4. block,function,global
+5. can be re-declared           5. cann't be re-declared    5. cann't be re-declared
+6. TDZ - No                     6. TDZ - Yes                6. TDZ - Yes
+
+
+
+How Javascript Code Gets Executed
+=================================
+-When a javascript program runs, 1 Global Execution Context(anonymous) is created
+-For Every Function Call, a new Function Execution Context(f1,f2,f3) is Created
+-Execution Context = Environment in which code gets executed
+-Each Execution Context has 2 phases:
+    1. Memory Creation Phase (memory gets allocated for variables and functions)
+    2. Code Execution ( variables are initialized with actual value, functions are invoked)
+
+
+Hoisting
+========
+-Its a mechanism where variables and functions are moved to the top of their scope
+-It allows to access only var type variables before initialization
+-During memory phase though var/let/const everything is hoisted(present in memory),
+ only var type variables are initialized with undefined value
+
+
+Temporal Dead Zone (TDZ)
+========================
+-The state where variables are un-reachable 
+-They are there in memory, but they are not usable
+-let/const variables even though they are present in memory we cannt use them 
+ as long as they are not initialized with actula values(10/20)

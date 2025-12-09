@@ -1,0 +1,28 @@
+<script>
+  console.log("Gloabl Code Starts Here...");
+  console.log("a value is ", a); // Hoisting  // undefined during memory
+//   console.log("b value is ", b); // TDZ , as they have no value, they are not usable
+  var a = 10; 
+  let b = 20; 
+  const c = 30;
+  console.log(`Global Scope-  a:${a}  b:${b}  c:${c}`);
+
+  function addition(a,b) {
+    console.log("addition Function starts here...");
+    return a+b;
+  }
+  function multiplication(x, y) {
+    console.log("multiplication Function starts here...");
+    return x * y;
+  }
+
+  let addResult = addition(a, b);
+  let mulResult = multiplication(a, b);
+  console.log(`Addition of ${a} & ${b} is ${addResult}`);
+  console.log(`multiplication of ${a} & ${b} is ${mulResult}`);
+
+  console.log("Gloabl Code Ends Here...");
+
+  // How many Execution Contexts : 3
+  // 1 - Global(anonymous) 2. addition  3. multiplication
+</script>
