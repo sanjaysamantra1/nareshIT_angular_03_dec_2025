@@ -1,0 +1,17 @@
+<script>
+  "use strict";
+  // 1. Function Declarations
+  add(2, 3); // fine : hoisting
+  function add(a, b) {
+    console.log(`Addition of ${a} and ${b} is ${a + b}`);
+  }
+  add(10, 20);
+
+  // 2. Function Expression
+  // sub(10, 5); // Cannot access 'sub' before initialization
+  let sub = function (a, b) {
+    console.log(`Subtraction of ${a} and ${b} is ${a - b}`);
+  };
+  sub(20, 10);
+  console.log(sub);
+</script>

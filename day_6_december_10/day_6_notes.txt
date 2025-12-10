@@ -1,0 +1,42 @@
+functions
+=========
+1. pre-defined   : console.log() , math.max(), math.min()
+2. user-defined  : developers writes , and uses
+
+
+Javascript in-built objects and methods
+========================================
+console  : log() , warn(), error(), table(), dir() , time(), timeEnd()
+document : getElementById(), getElementsByClassName(), querySelector()
+window : open(), print(), alert(), promp(), confirm(), atob(), btoa()
+Math  : max(), min(), sqrt()
+Object : assign(), create() , freeze()
+
+
+alert() : to display alert message
+          message + ok
+confirm() : User Confirmation 
+            message + ok(true) + cancel(false) 
+prompt() : to collect user input
+           message + inputbox + ok + cancel    
+
+
+//   Note: window object methods can be invoked directly without using window
+//   alert();  OR  window.alert();
+
+btoa(string)  encrypts
+atob(ancryptedStr)  decrypts
+
+
+User Defined functions
+=======================
+1. Function Declaration / named functions
+2. Function Expression / anonymous
+3. Self Invoked / IIFE
+4. Arrow Function
+
+
+Function Declaration  vs Function Expression
+=============================================
+1. Function Declarations are named , where as Function Expressions are anonymous
+2. Function Declarations are hoisted, Function Expression are not hoisted
