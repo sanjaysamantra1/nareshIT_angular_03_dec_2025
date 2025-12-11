@@ -1,0 +1,17 @@
+<script>
+  let user = {
+    firstName: "Virat",
+    lastName: "Kohli",
+    fullName1: function () { // Regular : this = how/where the function is called
+      console.log(`Regular Function: ${this.firstName}  ${this.lastName}`);
+      console.log(this);
+    },
+    fullName2: () => { // Arrow : this = where the function is written
+      console.log(`Arrow Function: ${this.firstName}  ${this.lastName}`);
+      console.log(this);
+    }
+  };
+
+  user.fullName1(); // fullname1 is regular function , inside fullname1 , this = user
+  user.fullName2(); // fullname2 is arrow function, inside fullname2 , this = window
+</script>

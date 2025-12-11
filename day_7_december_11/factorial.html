@@ -1,0 +1,25 @@
+<script>
+  let factorialIterative = (n)=> {
+    // Factorial is not defined for negative numbers
+    if (n < 0) {
+      return "Undefined (Factorial is not defined for negative numbers)";
+    }
+    // Factorial of 0 and 1 is 1
+    else if (n === 0 || n === 1) {
+      return 1;
+    }
+    // Calculate factorial using a loop
+    else {
+      let result = 1;
+      for (let i = 2; i <= n; i++) {
+        result *= i; // Multiply result by each number from 2 to n
+      }
+      return result;
+    }
+  }
+
+  // Example usage:
+  console.log(factorialIterative(5)); // Output: 120 (which is 5 * 4 * 3 * 2 * 1)
+  console.log(factorialIterative(0)); // Output: 1
+  console.log(factorialIterative(-1)); // Output: Undefined...
+</script>

@@ -1,0 +1,24 @@
+<script>
+  function f1() {
+    var a = 10; // function
+    console.log(`in function scope, a:: ${a}`);
+    if (true) {
+      var b = 20; // even though its declared inside a block, its scope is not block scoped
+      console.log(`inside block b :: ${b}`);
+    }
+    console.log(`outside block b :: ${b}`);
+  }
+  f1();
+
+  // Before 2015(es_6) , there were no let/const, how we used achieve block scope
+  function f2() {
+    if (true) {
+      (function () {
+        var x = 100;
+        console.log("inside Block x: ", x);
+      })();
+    }
+    console.log("outside Block x: ", x);
+  }
+  f2();
+</script>

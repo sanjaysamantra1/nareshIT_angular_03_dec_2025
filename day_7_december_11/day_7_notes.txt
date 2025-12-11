@@ -1,0 +1,32 @@
+
+User Defined functions
+=======================
+1. Function Declaration / named functions
+2. Function Expression / anonymous
+3. Self Invoked / IIFE-Immediately Invoked Function expression
+4. Arrow Function
+
+
+Self Invoked / IIFE
+===================
+-To invoke a function only once(during page load)
+-to create block variables even by using 'var'
+ex: (function(){
+    // function Body
+})();
+
+
+Arrow Function (ES_6 - 2015)
+==============
+-concise syntax
+-implicit return
+-arrow function doesn't have it's own 'this'
+-arrow function uses 'this' from lexical/outer scope
+-'this' is static in arrow function
+-best suited for as callback functions
+
+
+Arrow Function Limitations
+==========================
+-Arrow Functions shouldn't be used as object literal methods
+-Arrow functions shouldn't be used, if 'this' has to be dynamic
