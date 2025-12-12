@@ -1,0 +1,24 @@
+<script>
+  class Student {
+    firstName = "Virat";
+    lastName = "Kohli";
+    fullName1() {
+      console.log("fullname1", this);
+      console.log("Regular Function: ", this.firstName, this.lastName);
+    }
+    fullName2 = () => {
+      console.log("Arrow Function: ", this.firstName, this.lastName);
+    };
+  }
+  let std = new Student();
+  std.fullName1();
+  std.fullName2();
+
+  function test(callbackfn) {
+    console.log("I am Test Function");
+    console.log("I am HigherOrder  Function");
+    callbackfn();
+  }
+  test(std.fullName2);
+  test(std.fullName1);
+</script>

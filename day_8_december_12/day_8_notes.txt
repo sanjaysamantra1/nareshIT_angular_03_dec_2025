@@ -1,0 +1,20 @@
+Higher Order Function 
+=====================
+-A function is called Higher Order Function, if it has either of the below 2 abilities
+    a. if a function takes another function as argument
+    b. if a function returns another function
+
+
+CallBack Function
+=================
+-a function that's passed as argument to another function is called callback function
+
+
+
+Closure 
+========
+-A closure is a concept where an inner function has access to its outer function's data 
+ even after outer function's execution is over.
+-Closure scope will not be seen for outer function
+-closure scope is attached to an inner function only if that inner function is accesing out functions variables
+-closure : Data Encapsulation , Function Facory

@@ -1,0 +1,24 @@
+<script>
+  class Student {
+    firstName = "Virat";
+    lastName = "Kohli";
+
+    fullName1() {
+      // this = how the function is invoked = std / window
+      console.log("Regular Function: ", this.firstName, this.lastName);
+    }
+    fullName2 = () => {
+      // this = where the function is written = std (static)
+      console.log("Arrow Function: ", this.firstName, this.lastName);
+    };
+  }
+  let std = new Student();
+  //   std.fullName1();
+  //   std.fullName2();
+
+  setTimeout(std.fullName1, 2000);
+  setTimeout(std.fullName2, 4000);
+
+  // setTimeout() is a higerorder function
+  // fullName2 is a callback function
+</script>
