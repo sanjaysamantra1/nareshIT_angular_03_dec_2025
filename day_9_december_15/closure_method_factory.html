@@ -1,0 +1,14 @@
+<script>
+  function createLogger(prefix) { // createLogger  is function factory
+    return function log(message) {
+      console.log(`[${prefix}] ${message}`);
+    }
+  }
+  const infoLogger = createLogger('INFO');
+  const errorLogger = createLogger('ERROR');
+
+  infoLogger('Server Started at PORT::5000');
+  errorLogger('Database COnnection Failed');
+
+  console.dir(infoLogger)
+</script>

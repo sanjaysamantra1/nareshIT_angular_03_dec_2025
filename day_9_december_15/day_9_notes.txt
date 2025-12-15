@@ -1,0 +1,7 @@
+Closure
+=======
+Encapsulation : Bundling Data & Methods
+                Don't expose data , expose the member functions
+-Factory Method
+
+
