@@ -5,3 +5,6 @@ Encapsulation : Bundling Data & Methods
 -Factory Method
 
 
+
+Assignment:
+Create 1 counter application using closure (increment, decrement , reset)

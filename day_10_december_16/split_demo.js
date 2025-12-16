@@ -1,0 +1,8 @@
+let str = 'This is Javascript Class';
+
+console.log(str.split('')); // ['t','h','i'....]
+console.log(str.split(' ')); // ['This', 'is', 'Javascript', 'Class' ]
+console.log(str.split('This')); // ['',' is Javascript Class']
+console.log(str.split('Class')); // ['This is Javascript ','']
+console.log(str.split('Java')); // ['This is ','script Class']
+console.log(str.split('Python')); // ['This is Javascript Class']
