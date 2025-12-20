@@ -7,6 +7,7 @@ console.log(arr2);  // [ 10, 20, 30, 40 ]
 
 
 let arr3 = [10, 20, [30, 31]];
+let newArr = arr3.slice(); // shallow copy
 let arr4 = [...arr3]; // copy by value : shallow copy
 arr4.push(40,50); // when 40 is pused to arr4, arr3 is not impacted
 arr4[2].push(32, 33);
