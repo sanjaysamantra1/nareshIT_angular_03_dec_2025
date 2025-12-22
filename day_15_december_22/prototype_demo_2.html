@@ -1,0 +1,32 @@
+<script>
+  class Employee {
+    eid;fName;lName;sal;
+    constructor(eid, fName, lName, sal) {
+      this.eid = eid;
+      this.fName = fName;
+      this.lName = lName;
+      this.sal = sal;
+    }
+    f1(){
+        console.log('I am f1....')
+    }
+    f2 = function(){
+        console.log('I am f2...')
+    }
+    getFullName = () => {
+      // this method will be created in every object
+      return this.fName + this.lName;
+    };
+    /* getYearlySal = () => {
+      return this.sal * 12;
+    }; */
+  }
+  Employee.prototype.getYearlySal = () => {
+    console.log('I am getyearlsy sal method')
+  };
+
+  let emp1 = new Employee(101, "Pradeep", "Garre", 4000);
+  console.log(emp1);
+  console.log(emp1.getFullName());
+  console.log(emp1.getYearlySal());
+</script>

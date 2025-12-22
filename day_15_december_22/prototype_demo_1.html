@@ -1,0 +1,25 @@
+<script>
+  class Student {
+    roll;
+    name;
+    course;
+    constructor(roll, name, course) {
+      this.roll = roll;
+      this.name = name;
+      this.course = course;
+      //   this.clgName = "nareshIT"; // this property is seen in every object
+    }
+  }
+  Student.prototype.clgName = "nareshIT";
+
+  let std1 = new Student(101, "sajjan", "Angular");
+  let std2 = new Student(102, "kishore", "Angular");
+  console.log(std1);
+  console.log(std2);
+  console.log(std1.name, std1.clgName);
+
+  std1.clgName = "nareshInfoTech"; // here we are not changing the common/prototype clgName
+  // along with the prototype , std1 will have a more direct propert clgName
+  console.log(std1.name, std1.clgName); // nareshInfoTech
+  console.log(std2.name, std2.clgName); // nareshIT
+</script>

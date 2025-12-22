@@ -1,0 +1,21 @@
+OOP
+====
+Class: BluePrint / structure / template to create objects
+       no physical existance
+
+Object: Physical entity / instance of a Class
+        
+
+in ES_5 , constructor function is used to create a Class
+in ES_6 , we got class keyword
+
+
+Prototype
+=========
+-a mechanism by which objects can inherit properties & methods from other objects.
+-if value of a property/method remains same across objects, declare that property in prototype
+-Every Javascript Object has a hidden property called [[prototype]], this prototype
+ is another object from which it inherits properties and methods
+-when we try to access a property:
+    1. javascript looks for that property in the object itself
+    2. if not found in object, it looks in its prototype
