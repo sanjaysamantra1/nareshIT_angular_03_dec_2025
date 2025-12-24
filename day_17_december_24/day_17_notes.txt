@@ -1,0 +1,9 @@
+
+CallBacks : call a function when an operation is done
+            callback helll : callback inside callback
+
+Promise : A promise is an object whose value might not present now, will be available in future
+         -Status : Pending , Fulfilled , Rejected
+         -API calling , Timers , File reading
+
+Async-Await : syntax change to handle async operations in sync manner
