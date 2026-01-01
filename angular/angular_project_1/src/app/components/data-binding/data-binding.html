@@ -1,0 +1,87 @@
+<h3 class="text-center">Let's Learn Data Binding</h3>
+
+<div class="border border-2 p-2 m-2 rounded-2">
+  <div>Name is:: {{ userName }}</div>
+
+  <div>
+    <img src="{{ img_url }}" alt="" class="mx-2" (click)="f1()" />
+    <img [src]="img_url" alt="" class="mx-2" />
+    <img bind-src="img_url" alt="" class="mx-2" />
+  </div>
+
+  <div>
+    <input type="text" value="{{ userName }}" />
+    <input type="text" [value]="userName" class="mx-2" />
+    <input type="text" bind-value="userName" class="mx-2" />
+    <input type="text" [(ngModel)]="userName" class="mx-2" />
+  </div>
+
+  <div class="my-2">
+    <button class="btn btn-primary" disabled="{{ flag }}">Click Me</button>
+    <button class="btn btn-primary mx-2" [disabled]="flag">Click Me</button>
+    <button class="btn btn-primary" bind-disabled="flag">Click Me</button>
+  </div>
+</div>
+
+<div class="border border-2 p-2 m-2 rounded-2">
+  <h3>Count:: {{ count }}</h3>
+  <button class="btn btn-primary" (click)="increment()">Increment</button>
+  <button class="btn btn-primary mx-2" on-click="increment()">Increment</button>
+</div>
+
+<div class="border border-2 p-2 m-2 rounded-2">
+  <h3>Assignment-1</h3>
+  <div>
+    Have a paragraph & a toggle button, on click of the button control the visibility(Show/Hide) of
+    the paragraph
+  </div>
+  <h1 [hidden]="flag">Helloooo Everyone, Good Morning</h1>
+  <button class="btn btn-primary" (click)="flag = !flag">
+    {{ flag ? 'SHOW' : 'HIDE' }}
+  </button>
+</div>
+
+<div class="border border-2 p-2 m-2 rounded-2">
+  <h3>Assignment-2</h3>
+  <div>
+    Create a text-area with maxLength=100, as the user keeps typing display updated Remaining
+    characters.
+  </div>
+  <textarea maxlength="100" [(ngModel)]="msg"></textarea>
+  <div>Remaining Characters: {{ 100 - msg.length }}</div>
+</div>
+
+<div class="border border-2 p-2 m-2 rounded-2">
+  <h3>Assignment-3</h3>
+  <div>
+    Create dropdown with state names, when user changes dropdown value, print the selected dropdown
+    value in a div
+  </div>
+  <select [(ngModel)]="selectedState">
+    <option>Karnataka</option>
+    <option>Odisha</option>
+    <option>Maharastra</option>
+    <option>Kerala</option>
+    <option>Tamilnadu</option>
+    <option>Andhra pradesh</option>
+  </select>
+  <div>Selected State: {{ selectedState }}</div>
+</div>
+
+<div class="border border-2 p-2 m-2 rounded-2">
+  <h3>Assignment-4</h3>
+  <div>create a input box, toggle the type of that input box to (text/password).</div>
+  <input type="{{ flag ? 'text' : 'password' }}" />
+  <button class="btn btn-primary mx-1" (click)="flag = !flag">
+    {{ flag ? 'HIDE' : 'SHOW' }}
+  </button>
+</div>
+
+<div class="border border-2 p-2 m-2 rounded-2">
+  <h3>Assignment-4</h3>
+  <div>create a input box, toggle the type of that input box to (text/password).</div>
+  <input type="{{ flag ? 'text' : 'password' }}" />
+  <button class="btn btn-primary mx-1" (click)="flag = !flag">
+    {{ flag ? 'HIDE' : 'SHOW' }}
+  </button>
+</div>
