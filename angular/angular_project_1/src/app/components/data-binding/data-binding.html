@@ -1,4 +1,10 @@
-<h3 class="text-center">Let's Learn Data Binding</h3>
+<style>
+  h3 {
+    color: brown;
+  }
+</style>
+
+<h2 class="text-center">Let's Learn Data Binding</h2>
 
 <div class="border border-2 p-2 m-2 rounded-2">
   <div>Name is:: {{ userName }}</div>
@@ -27,6 +33,13 @@
   <h3>Count:: {{ count }}</h3>
   <button class="btn btn-primary" (click)="increment()">Increment</button>
   <button class="btn btn-primary mx-2" on-click="increment()">Increment</button>
+</div>
+
+<div class="border border-2 p-2 m-2 rounded-2">
+  <h3>Attribute Binding</h3>
+  <textarea [attr.maxlength]="maxAllowed" [(ngModel)]="msg"> </textarea>
+  <textarea [maxLength]="maxAllowed" [(ngModel)]="msg"> </textarea>
+  <div>Remaining:: {{ maxAllowed - msg.length }}</div>
 </div>
 
 <div class="border border-2 p-2 m-2 rounded-2">
@@ -78,10 +91,31 @@
 </div>
 
 <div class="border border-2 p-2 m-2 rounded-2">
-  <h3>Assignment-4</h3>
-  <div>create a input box, toggle the type of that input box to (text/password).</div>
-  <input type="{{ flag ? 'text' : 'password' }}" />
-  <button class="btn btn-primary mx-1" (click)="flag = !flag">
-    {{ flag ? 'HIDE' : 'SHOW' }}
-  </button>
+  <h3 [style.color]="selectedColor">Assignment-10</h3>
+  <div>
+    Create a dropdown with colors and change the background color of a div based on selection.
+  </div>
+  <select [(ngModel)]="selectedColor">
+    <option>red</option>
+    <option>blue</option>
+    <option>green</option>
+  </select>
+</div>
+
+<div class="border border-2 p-2 m-2 rounded-2">
+  <h3>Add 2 Numbers using 2-way binding</h3>
+  <input type="number" [(ngModel)]="num1" />
+  <input type="number" [(ngModel)]="num2" class="mx-2" />
+  <div>Addition of {{ num1 }} and {{ num2 }} is {{ num1 + num2 }}</div>
+</div>
+
+<div class="border border-2 p-2 m-2 rounded-2">
+  <h3 style="color: blueviolet">Add 2 Numbers using template reference variables</h3>
+  <input id="num3" type="number" #num3 />
+  <!--num3 is template variable-->
+  <input type="number" ref-num4 />
+  <!--num4 is template variable-->
+  <div>sum is {{ addResult }}</div>
+
+  <button (click)="addition(num3, num4)">Add</button>
 </div>
