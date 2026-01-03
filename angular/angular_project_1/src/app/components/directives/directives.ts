@@ -1,11 +1,10 @@
-import { CommonModule } from '@angular/common';
+
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-directives',
   imports: [
-    CommonModule,
     FormsModule
   ],
   templateUrl: './directives.html',
@@ -22,4 +21,27 @@ export class Directives {
     { "eId": 102, "name": "sita", "sal": 9000, "gender": "female" },
     { "eId": 105, "name": "deepak", "sal": 8000, "gender": "male" }
   ];
+  tasks = [
+    {
+      id: 1,
+      title: "Review project proposal",
+      completed: false,
+      priority: "High"
+    },
+    {
+      id: 2,
+      title: "Schedule team meeting",
+      completed: true,
+      priority: "Medium"
+    },
+    {
+      id: 3,
+      title: "Update task list in the documentation",
+      completed: false,
+      priority: "Low"
+    }
+  ];
+  filterTasks() {
+    
+  }
 }

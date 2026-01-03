@@ -1,4 +1,4 @@
-<div class="text-center">Let's Learn Directives</div>
+<h2 class="text-center">Let's Learn Directives</h2>
 
 <div class="border border-2 rounded-2 p-2 m-2">
     <div>Before Angular-17 , if-else</div>
@@ -67,21 +67,59 @@
     <table class="table table-bordered table-striped">
       <thead>
         <tr>
+          <th>sl No</th>
           <th>EId</th>
           <th>Name</th>
           <th>Gender</th>
           <th>Salary</th>
+          <th>isFirst?</th>
+          <th>isLast?</th>
+          <th>isEven?</th>
+          <th>isOdd?</th>
         </tr>
       </thead>
       <tbody>
-        @for (emp of employees; track $index) {
-        <tr>
-          <td>{{emp.eId}}</td>
-          <td>{{emp.name}}</td>
-          <td>{{emp.gender}}</td>
-          <td>{{emp.sal}}</td>
-        </tr>
+        @for (emp of employees; track emp.eId) {
+          <tr>
+            <td>{{$index + 1}}</td>
+            <td>{{emp.eId}}</td>
+            <td>{{emp.name}}</td>
+            <td>{{emp.gender}}</td>
+            <td>{{emp.sal}}</td>
+            <td>{{$first}}</td>
+            <td>{{$last}}</td>
+            <td>{{$even}}</td>
+            <td>{{$odd}}</td>
+          </tr>
+        }@empty {
+          No Rows Found
         }
       </tbody>
     </table>
+</div>
+
+
+<div class="border border-2 rounded-2 p-2 m-2">
+  <pre>
+    Create an array of task objects, and display them using for
+     Every Element Should have a checkbox, When a checkbox is clicked, toggle completion status(true/false)
+     for completed tasks show them as striked-out
+     add a dropdown with 3 values 'All','Completed','Pending' , based on the value selected, show the tasks
+    </pre>
+
+    <h3>Task List::</h3>
+    <ul>
+      @for (task of tasks; track $index) {
+      <li [style.text-decoration]="task.completed?'line-through' : '' ">
+        <input type="checkbox" [(ngModel)]="task.completed" [checked]="task.completed">
+        <span>{{task.title}}</span>
+        <span class="mx-3">{{task.completed}}</span>
+      </li>
+      }
+    </ul>
+    <select (change)="filterTasks()">
+      <option>all</option>
+      <option>completed</option>
+      <option>pending</option>
+    </select>
 </div>
