@@ -1,10 +1,12 @@
 import { Component, ViewEncapsulation } from '@angular/core';
 import { DataBinding } from '../data-binding/data-binding';
+import { Directives } from '../directives/directives';
 
 @Component({
   selector: 'app-body',
   imports: [
-    DataBinding
+    DataBinding,
+    Directives
   ],
   templateUrl: './body.html',
   styleUrl: './body.css',
