@@ -1,10 +1,12 @@
 
+import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-directives',
   imports: [
+    CommonModule,
     FormsModule
   ],
   templateUrl: './directives.html',
@@ -42,6 +44,17 @@ export class Directives {
     }
   ];
   filterTasks() {
-    
+  }
+
+  myStyle1 = {
+    color: 'red',
+    border: '5px dotted green'
+  }
+  myStyle2 = {
+    color: 'blue',
+    border: '5px dashed yellow'
+  }
+  myFunction() {
+    return this.num % 2 === 0 ? this.myStyle1 : this.myStyle2;
   }
 }

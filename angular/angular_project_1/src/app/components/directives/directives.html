@@ -1,101 +1,101 @@
 <h2 class="text-center">Let's Learn Directives</h2>
 
 <div class="border border-2 rounded-2 p-2 m-2">
-    <div>Before Angular-17 , if-else</div>
-    <div *ngIf="num%2 == 0; else oddBlock">
-      {{num}} is Even
-    </div>
-    <ng-template #oddBlock>
-      {{num}} is Odd
-    </ng-template>
+  <div>Before Angular-17 , if-else</div>
+  <div *ngIf="num%2 == 0; else oddBlock">
+    {{num}} is Even
+  </div>
+  <ng-template #oddBlock>
+    {{num}} is Odd
+  </ng-template>
 </div>
 
 <div class="border border-2 rounded-2 p-2 m-2">
-    <div>After Angular-17 , if-else</div>
-    <input type="number" [(ngModel)]="num" />
-    @if(num%2 == 0 ){
-      <div>{{num}} is Even</div>
-    }@else {
-      <div>{{num}} is Odd</div>
-    }
+  <div>After Angular-17 , if-else</div>
+  <input type="number" [(ngModel)]="num" />
+  @if(num%2 == 0 ){
+    <div>{{num}} is Even</div>
+  }@else {
+    <div>{{num}} is Odd</div>
+  }
 </div>
 
 <div class="border border-2 rounded-2 p-2 m-2">
   <div>if vs hidden</div>
   <h2 [hidden]="!flag">Helloooo, Good Morning from hidden Block</h2>
   @if(flag){
-    <h2>Helloooo, Good Morning from if block</h2>
+  <h2>Helloooo, Good Morning from if block</h2>
   }
   <button class="btn btn-primary" (click)="flag=!flag">Toggle</button>
 </div>
 
 
 <div class="border border-2 rounded-2 p-2 m-2">
-    <div>Switch-Case</div>
-    @switch (num) {
-      @case (1) { <h1>Monday</h1> }
-      @case (2) { <h1>Tuesday</h1> }
-      @case (3) { <h1>Wednesday</h1> }
-      @case (4) { <h1>Thursday</h1> }
-      @case (5) { <h1>Friday</h1> }
-      @case (6) { <h1>Saturday</h1> }
-      @case (7) { <h1>Sunday</h1> }
-      @default { <h1>Not a Valid number</h1> }
+  <div>Switch-Case</div>
+  @switch (num) {
+  @case (1) { <h1>Monday</h1> }
+  @case (2) { <h1>Tuesday</h1> }
+  @case (3) { <h1>Wednesday</h1> }
+  @case (4) { <h1>Thursday</h1> }
+  @case (5) { <h1>Friday</h1> }
+  @case (6) { <h1>Saturday</h1> }
+  @case (7) { <h1>Sunday</h1> }
+  @default { <h1>Not a Valid number</h1> }
+  }
+</div>
+
+<div class="border border-2 rounded-2 p-2 m-2">
+  <div>Country List Using for()::</div>
+  <ul>
+    @for (country of country_list; track $index) {
+    <li>{{country}}</li>
     }
+  </ul>
 </div>
 
 <div class="border border-2 rounded-2 p-2 m-2">
-    <div>Country List Using for()::</div>
-    <ul>
-      @for (country of country_list; track $index) {
-        <li>{{country}}</li>
+  <div>Country List Dropdown Using for()::</div>
+  <select>
+    @for (country of country_list; track $index) {
+    <option>{{country}}</option>
+    }
+  </select>
+</div>
+
+<div class="border border-2 rounded-2 p-2 m-2">
+  <div>Employee Table::</div>
+  <table class="table table-bordered table-striped">
+    <thead>
+      <tr>
+        <th>sl No</th>
+        <th>EId</th>
+        <th>Name</th>
+        <th>Gender</th>
+        <th>Salary</th>
+        <th>isFirst?</th>
+        <th>isLast?</th>
+        <th>isEven?</th>
+        <th>isOdd?</th>
+      </tr>
+    </thead>
+    <tbody>
+      @for (emp of employees; track emp.eId) {
+      <tr>
+        <td>{{$index + 1}}</td>
+        <td>{{emp.eId}}</td>
+        <td>{{emp.name}}</td>
+        <td>{{emp.gender}}</td>
+        <td>{{emp.sal}}</td>
+        <td>{{$first}}</td>
+        <td>{{$last}}</td>
+        <td>{{$even}}</td>
+        <td>{{$odd}}</td>
+      </tr>
+      }@empty {
+      No Rows Found
       }
-    </ul>
-</div>
-
-<div class="border border-2 rounded-2 p-2 m-2">
-    <div>Country List Dropdown Using for()::</div>
-    <select>
-      @for (country of country_list; track $index) {
-        <option>{{country}}</option>
-      }
-    </select>
-</div>
-
-<div class="border border-2 rounded-2 p-2 m-2">
-    <div>Employee Table::</div>
-    <table class="table table-bordered table-striped">
-      <thead>
-        <tr>
-          <th>sl No</th>
-          <th>EId</th>
-          <th>Name</th>
-          <th>Gender</th>
-          <th>Salary</th>
-          <th>isFirst?</th>
-          <th>isLast?</th>
-          <th>isEven?</th>
-          <th>isOdd?</th>
-        </tr>
-      </thead>
-      <tbody>
-        @for (emp of employees; track emp.eId) {
-          <tr>
-            <td>{{$index + 1}}</td>
-            <td>{{emp.eId}}</td>
-            <td>{{emp.name}}</td>
-            <td>{{emp.gender}}</td>
-            <td>{{emp.sal}}</td>
-            <td>{{$first}}</td>
-            <td>{{$last}}</td>
-            <td>{{$even}}</td>
-            <td>{{$odd}}</td>
-          </tr>
-        }@empty {
-          No Rows Found
-        }
-      </tbody>
-    </table>
+    </tbody>
+  </table>
 </div>
 
 
@@ -107,19 +107,37 @@
      add a dropdown with 3 values 'All','Completed','Pending' , based on the value selected, show the tasks
     </pre>
 
-    <h3>Task List::</h3>
-    <ul>
-      @for (task of tasks; track $index) {
-      <li [style.text-decoration]="task.completed?'line-through' : '' ">
-        <input type="checkbox" [(ngModel)]="task.completed" [checked]="task.completed">
-        <span>{{task.title}}</span>
-        <span class="mx-3">{{task.completed}}</span>
-      </li>
-      }
-    </ul>
-    <select (change)="filterTasks()">
-      <option>all</option>
-      <option>completed</option>
-      <option>pending</option>
-    </select>
+  <h3>Task List::</h3>
+  <ul>
+    @for (task of tasks; track $index) {
+    <li [style.text-decoration]="task.completed?'line-through' : '' ">
+      <input type="checkbox" [(ngModel)]="task.completed" [checked]="task.completed">
+      <span>{{task.title}}</span>
+      <span class="mx-3">{{task.completed}}</span>
+    </li>
+    }
+  </ul>
+  <select (change)="filterTasks()">
+    <option>all</option>
+    <option>completed</option>
+    <option>pending</option>
+  </select>
+</div>
+
+<div class="border border-2 rounded-2 p-2 m-2">
+  <h3>ngStyle : ngStyle is used to apply some style conditionally.</h3>
+  <input type="number" [(ngModel)]="num" />
+
+  <p [style.color]="num % 2 == 0 ? 'blue' : 'red'"> Add a style </p>
+  <p [style.fontSize.px]="num % 2 == 0 ? '24' : '12'"> Add style with unit </p>
+  <p [style.background-color]=" num % 2 == 0 ?'green':'red' "> Add style conditionally </p>
+  <p [ngStyle]="num % 2 == 0 ? myStyle1 : myStyle2"> NgStyle for multiple values </p>
+  <p [ngStyle]="myFunction()"> NgStyle for multiple values </p>
+</div>
+
+<div class="border border-2 rounded-2 p-2 m-2">
+  <h3>ngClass : ngClass is used to apply css classes conditionally.</h3>
+  <input type="number" [(ngModel)]="num" />
+
+  <button [ngClass]="['btn', num % 2 == 0 ?'btn-success':'btn-danger']">Click me</button>
 </div>
