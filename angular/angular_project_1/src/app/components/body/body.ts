@@ -1,3 +1,4 @@
+import { ProductList } from './../product-list/product-list';
 import { Component, ViewEncapsulation } from '@angular/core';
 import { DataBinding } from '../data-binding/data-binding';
 import { Directives } from '../directives/directives';
@@ -8,7 +9,8 @@ import { MyModal } from '../my-modal/my-modal';
   imports: [
     // DataBinding,
     // Directives,
-    MyModal
+    // MyModal
+    ProductList
   ],
   templateUrl: './body.html',
   styleUrl: './body.css',
