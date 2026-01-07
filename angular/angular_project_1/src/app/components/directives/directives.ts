@@ -2,12 +2,16 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { Nospecialchar } from '../../custom-directives/nospecialchar';
+import { Highlight } from '../../custom-directives/highlight';
 
 @Component({
   selector: 'app-directives',
   imports: [
     CommonModule,
-    FormsModule
+    FormsModule,
+    Nospecialchar,
+    Highlight
   ],
   templateUrl: './directives.html',
   styleUrl: './directives.css',

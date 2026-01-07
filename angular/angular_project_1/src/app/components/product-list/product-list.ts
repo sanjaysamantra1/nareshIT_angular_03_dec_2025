@@ -3,6 +3,8 @@ import * as data from './products.json';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { faStar, faRupee } from '@fortawesome/free-solid-svg-icons';
 import { NgxPaginationModule } from 'ngx-pagination';
+import Swal from 'sweetalert2';
+import Snackbar from 'awesome-snackbar';
 
 @Component({
   selector: 'app-product-list',
@@ -18,4 +20,13 @@ export class ProductList {
   faStar = faStar;
   faRupee = faRupee;
   p: number = 1;
+
+  openSweetAlert() {
+    Swal.fire('The Internet?', 'That thing is still around?', 'success')
+  }
+  openSnackbar() {
+    new Snackbar('Helloooo, Good Morning',
+      { position: 'top-center', theme: 'dark', timeout: 5000, actionText: 'X' }
+    );
+  }
 }

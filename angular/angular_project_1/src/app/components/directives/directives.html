@@ -14,9 +14,9 @@
   <div>After Angular-17 , if-else</div>
   <input type="number" [(ngModel)]="num" />
   @if(num%2 == 0 ){
-    <div>{{num}} is Even</div>
+  <div>{{num}} is Even</div>
   }@else {
-    <div>{{num}} is Odd</div>
+  <div>{{num}} is Odd</div>
   }
 </div>
 
@@ -137,7 +137,17 @@
 
 <div class="border border-2 rounded-2 p-2 m-2">
   <h3>ngClass : ngClass is used to apply css classes conditionally.</h3>
-  <input type="number" [(ngModel)]="num" />
+  <input type="number" [(ngModel)]="num"  />
 
   <button [ngClass]="['btn', num % 2 == 0 ?'btn-success':'btn-danger']">Click me</button>
+</div>
+
+<div class="border border-2 rounded-2 p-2 m-2">
+  <h3>Custom Directive::(character Only / No special character allowed)</h3>
+  <input appNospecialchar />
+</div>
+
+<div class="border border-2 rounded-2 p-2 m-2">
+  <h3>Custom Directive::HighLight</h3>
+  <h2 appHighlight>Hover on this element to see effect</h2>
 </div>

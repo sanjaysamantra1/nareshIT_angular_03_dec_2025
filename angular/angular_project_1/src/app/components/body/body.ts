@@ -9,9 +9,9 @@ import { UserList } from '../user-list/user-list';
   selector: 'app-body',
   imports: [
     // DataBinding,
-    // Directives,
+    Directives,
     // MyModal
-    ProductList
+    // ProductList
     // UserList
   ],
   templateUrl: './body.html',
