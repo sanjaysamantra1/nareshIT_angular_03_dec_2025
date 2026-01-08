@@ -4,8 +4,9 @@ import { Directive, ElementRef, HostListener } from '@angular/core';
   selector: '[appHighlight]',
 })
 export class Highlight {
-
-  constructor(private ele: ElementRef) {
+  // ele is an instance of ElementRef class
+  // let ele = new ElementRef();
+  constructor(private ele: ElementRef) { // Dependency Injection
     console.log(ele);
   }
   @HostListener('mouseenter')

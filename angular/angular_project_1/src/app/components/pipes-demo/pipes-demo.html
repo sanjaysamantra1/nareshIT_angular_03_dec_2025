@@ -1,0 +1,43 @@
+<h2 class="text-center">Let's Learn Pipes</h2>
+
+<div class="border border-2 rounded-2 m-2 p-2">
+  <h3>lowercase, uppercase, titlecase Pipe::</h3>
+  <div>UserName without pipe:: {{userName}}</div>
+  <div>UserName with uppercase pipe:: {{userName | uppercase}}</div>
+  <div>UserName with lowercase pipe:: {{userName | lowercase}}</div>
+  <div>UserName with titlecase pipe:: {{userName | titlecase}}</div>
+</div>
+
+<div class="border border-2 rounded-2 m-2 p-2">
+  <h3>Currency Pipe::</h3>
+  <div>{{mySal}}</div>
+  <div>{{mySal | currency}}</div>
+  <div>{{ mySal | currency : 'USD' : 'code' }}</div>
+  <div>{{ mySal | currency : 'USD' : 'symbol' }}</div>
+  <div>{{mySal | currency : 'INR'}}</div>
+  <div>{{mySal | currency : '&euro;'}}</div>
+  <div>{{mySal | currency : '&#x5143;'}}</div>
+  <!-- input  | pipeName : arguement -->
+</div>
+
+<div class="border border-2 rounded-2 m-2 p-2">
+  <h3>date Pipe::</h3>
+  <div>{{dateObj}}</div>
+  <div>{{ dateObj | date }}</div>
+  <div>ShortDate:: {{ dateObj | date :'short'}}</div>  <!-- Short Date + Short Time -->
+  <div>{{ dateObj | date : 'shortDate' }}</div>
+  <div>{{ dateObj | date : 'mediumDate' }}</div>
+  <div>{{ dateObj | date : 'longDate' }}</div>
+  <div>{{ dateObj | date : 'fullDate' }}</div>
+
+  <div>{{ dateObj | date : 'shortTime' }}</div>
+  <div>{{ dateObj | date : 'mediumTime' }}</div>
+  <div>{{ dateObj | date : 'longTime' }}</div>
+  <div>{{ dateObj | date : 'fullTime' }}</div>
+  <div>{{ dateObj | date : 'dd-MM-yyyy' }}</div>
+  <div>{{ dateObj | date : 'dd-MMM-yyyy' }}</div>
+  <div>{{ dateObj | date : 'dd-MMMM-yyyy' }}</div>
+
+  <div>{{dateObj | date : 'HH:mm' }}</div>
+  <div>{{ dateObj | date: "fullTime":"UTC" }}</div>
+</div>

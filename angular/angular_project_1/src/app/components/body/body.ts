@@ -4,15 +4,17 @@ import { DataBinding } from '../data-binding/data-binding';
 import { Directives } from '../directives/directives';
 import { MyModal } from '../my-modal/my-modal';
 import { UserList } from '../user-list/user-list';
+import { PipesDemo } from '../pipes-demo/pipes-demo';
 
 @Component({
   selector: 'app-body',
   imports: [
     // DataBinding,
-    Directives,
+    // Directives,
     // MyModal
     // ProductList
     // UserList
+    PipesDemo
   ],
   templateUrl: './body.html',
   styleUrl: './body.css',
