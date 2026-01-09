@@ -24,11 +24,15 @@
   <h3>date Pipe::</h3>
   <div>{{dateObj}}</div>
   <div>{{ dateObj | date }}</div>
-  <div>ShortDate:: {{ dateObj | date :'short'}}</div>  <!-- Short Date + Short Time -->
+  <div>{{ dateObj | date | uppercase}}</div>
+  <div>{{ dateObj | date | lowercase}}</div>
+  <div>ShortDate:: {{ dateObj | date :'short'}}</div> <!-- Short Date + Short Time -->
   <div>{{ dateObj | date : 'shortDate' }}</div>
   <div>{{ dateObj | date : 'mediumDate' }}</div>
   <div>{{ dateObj | date : 'longDate' }}</div>
   <div>{{ dateObj | date : 'fullDate' }}</div>
+  <div>{{ dateObj | date : 'fullDate' | uppercase }}</div>
+  <div>{{ dateObj | date : 'fullDate' |lowercase}}</div>
 
   <div>{{ dateObj | date : 'shortTime' }}</div>
   <div>{{ dateObj | date : 'mediumTime' }}</div>
@@ -40,4 +44,49 @@
 
   <div>{{dateObj | date : 'HH:mm' }}</div>
   <div>{{ dateObj | date: "fullTime":"UTC" }}</div>
+</div>
+
+<div class="border border-2 rounded-2 m-2 p-2">
+  <h3>number & pecent Pipe::</h3>
+  <div>{{ 12.111222333 | number: "3.2-5" }}</div>
+  <div>{{ 12.1 | number: "3.2-5" }}</div>
+  <div>{{0.5 | number:'3.2-5'}}</div>
+  <div>{{0.75 | percent}}</div>
+  <div>{{0.07 | percent}}</div>
+</div>
+
+<div class="border border-2 rounded-2 m-2 p-2">
+  <h3>JSON Pipe::</h3>
+  <div>{{user}}</div>
+  <div>{{user | json}}</div>
+</div>
+
+<div class="border border-2 rounded-2 m-2 p-2">
+  <h3>keyvalue Pipe::</h3>
+  @for(entry of user | keyvalue : keepOriginalOrder;track $index){
+  <div>{{entry.key}}---{{entry.value}}</div>
+  }
+</div>
+
+<div class="border border-2 rounded-2 m-2 p-2">
+  <h3>Slice Pipe::</h3>
+  <div>{{arr}}</div>
+  <div>{{arr | slice : 2}}</div>
+  <div>{{arr | slice : 2 : 5 }}</div>
+</div>
+
+<div class="border border-2 rounded-2 m-2 p-2">
+  <h3>Custom Pipe(remaining):</h3>
+
+  <textarea [(ngModel)]="msg" maxlength="100"></textarea>
+  <div>Remaining Char::{{msg | remaining}}</div>
+
+  <textarea [(ngModel)]="msg2" maxlength="200"></textarea>
+  <div>Remaining Char::{{msg2 | remaining : 200 }}</div>
+</div>
+
+<div class="border border-2 rounded-2 m-2 p-2">
+  <h3>Custom Pipe(Ordinal):</h3>
+  <input type="number" [(ngModel)]="num" />
+  <div>Ordinal:: {{num | ordinal}}</div>
 </div>
