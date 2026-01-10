@@ -1,0 +1,21 @@
+<div class="container">
+  <div class="row border border-3 rounded-3 p-2 text-center">
+    <div>
+      <div>This is Parent Component</div>
+      <div>My own data a: {{a}}</div>
+      <div>My child data courseName: {{child2.courseName}}</div>
+      <div>My child data address is: {{addressParent}}</div>
+    </div>
+
+    <div class="col-sm-6">
+      <div class="border border-3 rounded-3 text-center m-2 p-2">
+        <app-child1 [a]="a" [courseName]="child2.courseName"></app-child1>
+      </div>
+    </div>
+    <div class="col-sm-6">
+      <div class="border border-3 rounded-3 text-center m-2 p-2">
+        <app-child2 [achild2]="a" #child2 (addressEvent)='receiveAddressEvent($event)'></app-child2>
+      </div>
+    </div>
+  </div>
+</div>
