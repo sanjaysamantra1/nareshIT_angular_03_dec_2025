@@ -6,6 +6,7 @@ import { MyModal } from '../my-modal/my-modal';
 import { UserList } from '../user-list/user-list';
 import { PipesDemo } from '../pipes-demo/pipes-demo';
 import { Parent } from '../parent/parent';
+import { TrafficLight } from '../traffic-light/traffic-light';
 
 @Component({
   selector: 'app-body',
@@ -16,7 +17,8 @@ import { Parent } from '../parent/parent';
     // ProductList
     // UserList
     // PipesDemo
-    Parent
+    Parent,
+    // TrafficLight
   ],
   templateUrl: './body.html',
   styleUrl: './body.css',
