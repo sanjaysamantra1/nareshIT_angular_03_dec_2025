@@ -1,3 +1,4 @@
+import { HttpDemo1 } from './../http-demo1/http-demo1';
 import { ThemeService } from './../../services/theme-service';
 import { ProductList } from './../product-list/product-list';
 import { Component, inject, ViewEncapsulation } from '@angular/core';
@@ -19,8 +20,9 @@ import { ClockService } from '../../services/clock-service';
     // ProductList
     // UserList
     // PipesDemo
-    Parent,
+    // Parent,
     // TrafficLight
+    HttpDemo1
   ],
   templateUrl: './body.html',
   styleUrl: './body.css',
