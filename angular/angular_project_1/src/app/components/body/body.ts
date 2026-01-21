@@ -10,6 +10,8 @@ import { PipesDemo } from '../pipes-demo/pipes-demo';
 import { Parent } from '../parent/parent';
 import { TrafficLight } from '../traffic-light/traffic-light';
 import { ClockService } from '../../services/clock-service';
+import { Products } from '../products/products';
+import { HttpDemo2 } from '../http-demo2/http-demo2';
 
 @Component({
   selector: 'app-body',
@@ -22,7 +24,9 @@ import { ClockService } from '../../services/clock-service';
     // PipesDemo
     // Parent,
     // TrafficLight
-    HttpDemo1
+    // Products
+    // HttpDemo1
+    HttpDemo2
   ],
   templateUrl: './body.html',
   styleUrl: './body.css',
