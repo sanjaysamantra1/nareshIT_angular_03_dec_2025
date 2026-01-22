@@ -12,6 +12,7 @@ import { TrafficLight } from '../traffic-light/traffic-light';
 import { ClockService } from '../../services/clock-service';
 import { Products } from '../products/products';
 import { HttpDemo2 } from '../http-demo2/http-demo2';
+import { EmployeeList } from '../employee-list/employee-list';
 
 @Component({
   selector: 'app-body',
@@ -26,7 +27,8 @@ import { HttpDemo2 } from '../http-demo2/http-demo2';
     // TrafficLight
     // Products
     // HttpDemo1
-    HttpDemo2
+    // HttpDemo2
+    EmployeeList
   ],
   templateUrl: './body.html',
   styleUrl: './body.css',
@@ -38,8 +40,8 @@ export class Body {
     this.clockService = inject(ClockService); // Dependency Injection
   }
   ngOnInit() {
-    console.log('Is dark Theme: ', this.themeService.getTheme());
-    console.log('Date:: ', this.clockService.getTodayDate())
+    // console.log('Is dark Theme: ', this.themeService.getTheme());
+    // console.log('Date:: ', this.clockService.getTodayDate())
     // this.clockService.onTick(console.log);
   }
 }
