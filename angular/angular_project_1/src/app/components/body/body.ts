@@ -13,6 +13,8 @@ import { ClockService } from '../../services/clock-service';
 import { Products } from '../products/products';
 import { HttpDemo2 } from '../http-demo2/http-demo2';
 import { EmployeeList } from '../employee-list/employee-list';
+import { ObservableDemo1 } from '../observable-demo1/observable-demo1';
+import { ObservableDemo2 } from '../observable-demo2/observable-demo2';
 
 @Component({
   selector: 'app-body',
@@ -28,7 +30,9 @@ import { EmployeeList } from '../employee-list/employee-list';
     // Products
     // HttpDemo1
     // HttpDemo2
-    EmployeeList
+    // EmployeeList
+    // ObservableDemo1
+    ObservableDemo2
   ],
   templateUrl: './body.html',
   styleUrl: './body.css',
