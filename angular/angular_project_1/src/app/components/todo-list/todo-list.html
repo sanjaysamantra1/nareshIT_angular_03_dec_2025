@@ -1,0 +1,11 @@
+<p>todo-list works!</p>
+<ul>
+  @for (todo of todoArr; track $index) {
+  <li>
+    <span>{{todo.value}}</span>
+    <span>
+      <button class="btn btn-danger" (click)="deleteMyTodo(todo.id)">del</button>
+    </span>
+  </li>
+  }
+</ul>
