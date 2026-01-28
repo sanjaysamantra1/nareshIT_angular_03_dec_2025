@@ -13,7 +13,7 @@ export class SignalDemo2 {
   constructor(private httpClient: HttpClient) {
   }
   userDetailsEffect = effect(() => {
-    // const id = this.userId();
+    const id = this.userId();
     this.fetchUserDetails(1);
   });
   fetchUserDetails(id: number) {
