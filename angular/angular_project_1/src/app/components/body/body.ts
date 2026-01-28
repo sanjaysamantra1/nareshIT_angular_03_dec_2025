@@ -1,3 +1,4 @@
+import { SignalDemo1 } from './../signal-demo1/signal-demo1';
 import { SubjectDemo1 } from './../subject-demo1/subject-demo1';
 import { HttpDemo1 } from './../http-demo1/http-demo1';
 import { ThemeService } from './../../services/theme-service';
@@ -19,6 +20,7 @@ import { ObservableDemo2 } from '../observable-demo2/observable-demo2';
 import { ObservableDemo3 } from '../observable-demo3/observable-demo3';
 import { TodoList } from '../todo-list/todo-list';
 import { TodoAdd } from '../todo-add/todo-add';
+import { SignalDemo2 } from '../signal-demo2/signal-demo2';
 
 @Component({
   selector: 'app-body',
@@ -39,8 +41,10 @@ import { TodoAdd } from '../todo-add/todo-add';
     // ObservableDemo2
     // ObservableDemo3
     // SubjectDemo1
-    TodoList,
-    TodoAdd
+    // TodoList,
+    // TodoAdd
+    // SignalDemo1
+    SignalDemo2
   ],
   templateUrl: './body.html',
   styleUrl: './body.css',
