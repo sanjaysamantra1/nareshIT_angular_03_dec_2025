@@ -21,6 +21,8 @@ import { ObservableDemo3 } from '../observable-demo3/observable-demo3';
 import { TodoList } from '../todo-list/todo-list';
 import { TodoAdd } from '../todo-add/todo-add';
 import { SignalDemo2 } from '../signal-demo2/signal-demo2';
+import { FormDemo1 } from '../form-demo1/form-demo1';
+import { TemplateForm } from '../template-form/template-form';
 
 @Component({
   selector: 'app-body',
@@ -44,7 +46,9 @@ import { SignalDemo2 } from '../signal-demo2/signal-demo2';
     // TodoList,
     // TodoAdd
     // SignalDemo1
-    SignalDemo2
+    // SignalDemo2
+    // FormDemo1
+    TemplateForm
   ],
   templateUrl: './body.html',
   styleUrl: './body.css',

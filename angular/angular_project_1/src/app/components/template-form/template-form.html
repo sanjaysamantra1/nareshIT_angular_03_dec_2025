@@ -1,0 +1,31 @@
+<h3 class="text-center">Template Form</h3>
+
+<div class="col-sm-5 offset-3 p-2 border border-3 rounded-3">
+  <form #userForm="ngForm" (submit)="submitUserForm(userForm)">
+    <p>
+      FirstName: <input name="firstName" [(ngModel)]="user.firstName" ngModel required minlength="5" #firstNameField="ngModel" />
+      @if(firstNameField.hasError('required')){
+        <span class="text-danger mx-2">Firstname is Required</span>
+      }
+      @if(firstNameField.hasError('minlength')){
+        <span class="text-danger mx-2">Firstname Should have minimum 5 characters</span>
+      }
+    </p>
+    <p>
+      LastName: <input name="lastName" [(ngModel)]="user.lastName" ngModel />
+    </p>
+    <p>
+      Email: <input name="email" ngModel [(ngModel)]="user.email" />
+    </p>
+    <div ngModelGroup="address">
+      <p>City:<input name="city" ngModel [(ngModel)]="user.address.city" /></p>
+      <p>State:<input name="state" ngModel [(ngModel)]="user.address.state"/></p>
+      <p>Pincode:<input name="pincode" ngModel [(ngModel)]="user.address.pincode" /></p>
+    </div>
+
+    <input type="submit" value="Submit" [disabled]="userForm.invalid">
+    <input type="reset" value="Clear" class="mx-1">
+  </form>
+  <hr />
+  <pre> FormData: {{ userForm.value | json }} </pre>
+</div>
