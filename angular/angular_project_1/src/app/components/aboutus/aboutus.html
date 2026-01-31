@@ -1,1 +1,25 @@
-<p>aboutus works!</p>
+<h2 class="text-center">This is About US Page</h2>
+<hr />
+
+<p>
+  <a href="/home">Go To Home</a>
+</p>
+
+<p>
+  <button routerLink="/home">Go to Home</button>
+</p>
+<p>
+  <button (click)="doSomethingAndGoToHome()">Do Something & Go to Home</button>
+</p>
+
+<div class="container">
+  <div class="row">
+    <div class="col-sm-3">
+      <button class="btn btn-primary" (click)='previous()'>Previous</button>
+    </div>
+    <div class="col-sm-6"></div>
+    <div class="col-sm-3">
+      <button class="btn btn-primary" (click)='next()'>Next</button>
+    </div>
+  </div>
+</div>
