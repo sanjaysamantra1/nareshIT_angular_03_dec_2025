@@ -6,10 +6,12 @@ import { NgxPaginationModule } from 'ngx-pagination';
 import Swal from 'sweetalert2';
 import Snackbar from 'awesome-snackbar';
 import { Zoomin } from '../../custom-directives/zoomin';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-product-list',
   imports: [
+    RouterLink,
     FontAwesomeModule,
     NgxPaginationModule,
     Zoomin

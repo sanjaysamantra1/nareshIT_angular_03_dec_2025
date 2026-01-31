@@ -26,7 +26,8 @@
             Rating : {{product.rating.rate}}
             <fa-icon [icon]="faStar"></fa-icon>
           </p>
-          <a href="#" class="btn btn-primary">Details</a>
+          <button class="btn btn-primary mx-1" [routerLink]="['/productdetails']"
+            [queryParams]="{id:product.id,name:product.title,price:product.price}">Details</button>
         </div>
       </div>
     </div>
@@ -40,4 +41,3 @@
 </div>
 <button class="btn btn-primary" (click)="openSweetAlert()">Sweet Alert</button>
 <button class="btn btn-primary mx-2" (click)="openSnackbar()">SnackBar</button>
-

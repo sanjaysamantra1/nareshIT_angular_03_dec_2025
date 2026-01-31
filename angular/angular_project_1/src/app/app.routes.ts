@@ -7,6 +7,7 @@ import { Notfound } from './components/notfound/notfound';
 import { UserList } from './components/user-list/user-list';
 import { ProductList } from './components/product-list/product-list';
 import { UserDetails } from './components/user-details/user-details';
+import { ProductDetails } from './components/product-details/product-details';
 
 export const routes: Routes = [
   { path: '', component: Home },
@@ -17,5 +18,6 @@ export const routes: Routes = [
   { path: 'users', component: UserList },
   { path: 'userdetails/:id', component: UserDetails },
   { path: 'products', component: ProductList },
+  { path: 'productdetails', component: ProductDetails },
   { path: '**', component: Notfound },
 ];
