@@ -1,1 +1,11 @@
 <p>contactus works!</p>
+
+<form name='myForm' (submit)="submitForm()">
+    Name:
+    <input name='uname' [(ngModel)]='name' required /><br><br>
+    Age:
+    <input name='uage'  [(ngModel)]='age' />
+
+    <p></p>
+    <input type="submit" value="submit">
+</form>
